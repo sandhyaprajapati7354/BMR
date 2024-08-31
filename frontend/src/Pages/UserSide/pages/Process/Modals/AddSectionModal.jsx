@@ -21,7 +21,7 @@ const AddSectionModal = ({
     if (updateSection === "add-section") {
       try {
         const response = await axios.post(
-          `http://192.168.1.29:7000/bmr-form/add-bmr-section`,
+          `http://195.35.6.197:7000/bmr-form/add-bmr-section`,
           {
             bmr_id: bmr_id,
             bmr_tab_id: bmr_tab_id,
@@ -43,7 +43,7 @@ const AddSectionModal = ({
     } else if (updateSection === "edit-section") {
       try {
         const response = await axios.put(
-          `http://192.168.1.29:7000/bmr-form/edit-bmr-section/${bmr_section_id}`,
+          `http://195.35.6.197:7000/bmr-form/edit-bmr-section/${bmr_section_id}`,
           {
             bmr_id: bmr_id,
             bmr_tab_id: bmr_tab_id,
@@ -65,7 +65,7 @@ const AddSectionModal = ({
     } else if (updateSection === "edit-section") {
       try {
         const response = await axios.put(
-          `http://192.168.1.29:7000/bmr-form/edit-bmr-section/${bmr_section_id}`,
+          `http://195.35.6.197:7000/bmr-form/edit-bmr-section/${bmr_section_id}`,
           {
             bmr_id: bmr_id,
             bmr_tab_id: bmr_tab_id,
@@ -89,9 +89,9 @@ const AddSectionModal = ({
 
   return (
     <div>
-      <div className="fixed inset-0 flex items-center justify-center bg-opacity-50 backdrop-filter backdrop-blur-sm">
+      <div className="fixed inset-0 flex items-center justify-center  backdrop-filter backdrop-blur-sm">
         <div
-          className="bg-wihte border-2  p-4 rounded shadow-lg"
+          className="bg-white border-2  p-4 rounded shadow-lg"
           style={{ width: "400px" }}
         >
           <h2 className="text-lg font-bold mb-4">
@@ -127,7 +127,7 @@ const AddSectionModal = ({
             <option value="9">9</option>
             <option value="10">10</option>
           </select>
-          <div className="flex justify-end space-x-2">
+          <div className="flex justify-end space-x-2 mt-3">
             <AtmButton
               label="Save"
               onClick={handleSave}
