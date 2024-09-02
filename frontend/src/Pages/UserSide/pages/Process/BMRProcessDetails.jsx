@@ -872,7 +872,7 @@ const BMRProcessDetails = () => {
                     {section.section_name}
                   </div>
                 </div>
-                <div className="grid grid-cols-2 shadow-xl gap-4 px-5 py-[64px]">
+                <div className="grid grid-cols-2 shadow-xl gap-4 px-5 pb-[64px] pt-[10px]">
                   {section.BMR_fields?.map((field, index) => (
                     <div
                       key={index}
