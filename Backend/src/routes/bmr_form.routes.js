@@ -84,6 +84,7 @@ router.delete(
 
 router.get("/get-all-bmr", Auth.checkJwtToken, BmrController.getAllBMR);
 router.get("/get-a-bmr/:id", Auth.checkJwtToken, BmrController.getBMR);
+router.get("/get-approved-bmrs", Auth.checkJwtToken, BmrController.getApprovedBMRs);
 
 router.put(
   "/send-BMR-for-review",
@@ -124,6 +125,18 @@ router.post(
   "/get-user-roles",
   Auth.checkJwtToken,
   BmrController.GetUserOnBasisOfRoleGroup
+);
+
+router.post(
+  "/generate-report",
+  Auth.checkJwtToken,
+  BmrController.generateReport
+);
+
+router.get(
+  "/get-bmr-form-audit-trail/:id",
+  Auth.checkJwtToken,
+  BmrController.getBMRformAuditTrail
 );
 
 module.exports = router;
